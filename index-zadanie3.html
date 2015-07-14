@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Exercise 2 - Comarch</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Foundation | Welcome</title>
+<link rel="stylesheet" href="css/foundation.css" />
+<script src="js/vendor/modernizr.js"></script>
+<body>
+</head>
+<body>
+	<div class="row">
+		<div class="small-12 columns">
+			<div class="row">
+				<div class="small-6 columns small-centered panel">
+					<form action="" method="post">
+						<input type="text" placeholder="1"> <input type="text"
+							placeholder="2"> <input type="text" placeholder="3">
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="small-6 columns">
+			<div class="row">
+				<div class="small-6 columns">
+					<a href="#" data-reveal-id="myModal">Click Me For A Modal</a>
+
+					<div id="myModal" class="reveal-modal" data-reveal
+						aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+						<h2 id="modalTitle">Awesome. I have it.</h2>
+						<p class="lead">Your couch. It is mine.</p>
+						<p>I'm a cool paragraph that lives inside of an even cooler
+							modal. Wins!</p>
+						<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+					</div>
+				</div>
+
+
+				<div class="small-6 columns">
+
+
+					<div data-alert class="alert-box alert round">
+						Podblok2 alert <a href="#" onclick="alert(' Kliknąłeś link! ')"
+							class="close">&times;</a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="small-6 columns">
+			<div class="row">
+				<div class="small-6 columns">
+					<span data-tooltip aria-haspopup="true" class="has-tip"
+						title="Tooltips are awesome, you should totally use them!">extended
+						information</span>
+				</div>
+				<div class="small-6 columns">
+					<ul class="pricing-table">
+						<li class="title">Standard</li>
+						<li class="price">$99.99</li>
+						<li class="description">An awesome description</li>
+						<li class="bullet-item">1 Database</li>
+						<li class="bullet-item">5GB Storage</li>
+						<li class="bullet-item">20 Users</li>
+						<li class="cta-button"><a class="button" href="#">Buy Now</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/foundation.min.js"></script>
+	
+	<script type="text/javascript">
+	
+	//====2=====
+	function isInt(n){
+        return Number(n)===n && n%1===0;
+	}
+	
+	function podajImie() {
+	    var wynik = prompt("Podaj imię: ");
+	    if (wynik != null && wynik != ""){
+	    	return wynik;
+		}
+	    else {
+	    	podajImie();
+	    }
+	}
+	
+	function podajNazwisko() {
+    	var wynik = prompt("Podaj nazwisko: ")
+    	if (wynik != null && wynik != ""){
+	    	return wynik;
+		}
+	    else {
+	    	podajNazwisko();
+	    }
+	}
+	
+	function podajWiek() {
+	    var wynik = prompt("Podaj wiek: ")
+	    if (wynik != null && !isNaN(wynik)){
+	    	return wynik;
+		}
+	    else {
+	    	podajWiek();
+	    }
+	}
+	//==========
+	
+	
+	//====3=====
+	function _czlowiek(_name, _surname, _age){
+		this.name = _name;
+		this.surname = _surname;
+		this.age = _age;
+		this.przedstawSie = function(){
+			console.log('Przedstawiam się: ' + this.name + ' ' + this.nazwisko + ' ' + this.age);
+		}
+	}
+	//==========
+
+	
+	
+	//====4=====
+	var imie = podajImie();
+	console.log(imie);
+	
+	var nazwisko = podajNazwisko();
+	console.log(nazwisko);
+	
+	var wiek = podajWiek();
+	console.log(wiek);
+	//=========
+		
+	//====5=====
+	var obiekt = new _czlowiek(imie, nazwisko, wiek);
+	var human = new _czlowiek('Lukasz', 'Kazimierczak', 21);
+	//==========
+
+	//====6=====
+	obiekt.przedstawSie();
+	//==========
+		
+	//====7=====
+	console.log(human);
+	//==========
+		
+	//====8=====
+	var element = document.createElement('div');
+	
+	//==========
+		
+	
+	</script>
+</body>
+</html>
